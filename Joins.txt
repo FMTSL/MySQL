@@ -1,0 +1,33 @@
+select * from tb_produtos
+	inner join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	inner join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	inner join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+    where tb_marcas.nome = 'adidas'
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	inner join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+    where tb_marcas.nome = 'adidas'
+    and tb_produtos.preco < 60
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	inner join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+    where tb_produtos.nome = 'meias'
+    or tb_produtos.nome = 'camisas'
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	left join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
+
+select tb_produtos.nome, tb_produtos.preco, tb_marcas.nome from tb_produtos
+	right join tb_marcas
+    on tb_marcas.id = tb_produtos.marca_id
